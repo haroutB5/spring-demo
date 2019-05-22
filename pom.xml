@@ -12,7 +12,7 @@
         <repository>
             <id>docker.io</id>
             <name>haroutb5/${project.artifactId}</name>
-            <url>scp://docker.io/haroutb5/spring-demo</url>
+            <url>http://docker.io/haroutb5/spring-demo</url>
         </repository>
     </distributionManagement>
 
@@ -35,9 +35,10 @@
             <artifactId>jersey-client</artifactId>
             <version>2.28</version>
         </dependency>
-
     </dependencies>
+
     <build>
+
 
     <plugins>
         <plugin>
@@ -45,6 +46,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         </plugin>
+
 
         <plugin>
             <groupId>org.springframework.boot</groupId>
@@ -58,6 +60,17 @@
                 </execution>
             </executions>
         </plugin>
+
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-deploy-plugin</artifactId>
+            <version>3.0.0-M1</version>
+            <configuration>
+                <skip>true</skip>
+            </configuration>
+        </plugin>
+
 
         <plugin>
             <groupId>com.spotify</groupId>
@@ -84,9 +97,10 @@
                         <goal>build</goal>
                     </goals>
                 </execution>
-
             </executions>
         </plugin>
+
+
         <plugin>
             <groupId>io.openliberty.boost</groupId>
             <artifactId>boost-maven-plugin</artifactId>
