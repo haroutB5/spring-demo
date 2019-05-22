@@ -128,7 +128,7 @@
         <extensions>
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ssh</artifactId>
+                <artifactId>wagon-http</artifactId>
                 <version>3.0.0</version>
             </extension>
         </extensions>
